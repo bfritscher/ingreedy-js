@@ -86,11 +86,12 @@ letter
   = [a-zA-Z]
 
 char
-  = [a-zA-Z0-9\xC4\xE4\xDC\xFC\xD6\xDF\xF6'",.;\(\)\-_%\&\*\$\+\=]
+  = [a-zA-Z0-9\xC4\xE4\xDC\xFC\xD6\xDF\xF6ÀÁÂàáâæçèéêëîôœùúû’'",.;\(\)\-_%\&\*\$\+\=]
 
 unit
   = $(english_unit !letter)
   / $(german_unit !letter)
+  / $(french_unit !letter)
   / $(metric_unit !letter)
   / $(imprecise_unit !letter)
 
@@ -116,6 +117,11 @@ german_unit
   / Schuss
   / Tropfen
   / Bund
+
+french_unit
+  = cuillere_soupe
+  / cuillere_cafe
+  / pointe_couteau
 
 cup
   = 'cups'i
@@ -190,13 +196,13 @@ Esslöffel
   / 'gehäufte esslöffel'i
   / 'gehäufte eßlöffel'i
   / 'gehäufter el'i
-  / 'gehäufte el'i      
+  / 'gehäufte el'i
   / 'gestrichener esslöffel'i
-  / 'gestrichener eßlöffel'i  
+  / 'gestrichener eßlöffel'i
   / 'gestrichene esslöffel'i
-  / 'gestrichene eßlöffel'i  
+  / 'gestrichene eßlöffel'i
   / 'gestr. esslöffel'i
-  / 'gestr. eßlöffel'i  
+  / 'gestr. eßlöffel'i
   / 'gestr. el'i
   / 'gestr el'i
   / 'esslöffel'i
@@ -216,12 +222,12 @@ teaspoon
 Teelöffel
   = 'gehäufter teelöffel'i
   / 'gehäufte teelöffel'i
-  / 'gehäufte tl'i  
-  / 'gehäufter tl'i    
+  / 'gehäufte tl'i
+  / 'gehäufter tl'i
   / 'gestrichener teelöffel'i
-  / 'gestrichener tl'i  
+  / 'gestrichener tl'i
   / 'gestrichene teelöffel'i
-  / 'gestrichene tl'i  
+  / 'gestrichene tl'i
   / 'gestr. teelöffel'i
   / 'gestr. tl'i
   / 'teelöffel'i
@@ -231,7 +237,7 @@ Teelöffel
 
 Messerspitze
   = 'messerspitzen'i
-  / 'messerspitze'i  
+  / 'messerspitze'i
   / 'msp.'i
   / 'msp'i
 
@@ -255,6 +261,20 @@ Bund
   = 'bünde'i
   / 'bunde'i
   / 'bund'i
+
+cuillere_soupe
+  = 'cuillère à soupe'i
+  / 'c.s.'i
+  / 'cs'i
+
+cuillere_cafe
+  = 'cuillère à café'i
+  / 'c.c.'i
+  / 'cc'i
+
+pointe_couteau
+  = 'pointe de couteau'i
+  / 'pc'i
 
 metric_unit
   = gram
