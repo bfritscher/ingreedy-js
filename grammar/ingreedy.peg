@@ -86,7 +86,7 @@ letter
   = [a-zA-Z]
 
 char
-  = [a-zA-Z0-9\xC4\xE4\xDC\xFC\xD6\xDF\xF6ÀÁÂàáâæçèéêëîôœùúû’'",.;\(\)\-_%\&\*\$\+\=]
+  = [a-zA-Z0-9\xC4\xE4\xDC\xFC\xD6\xDF\xF6ÀÁÂàáâæçèéêëîôœùúûØ’'",.;\(\)\-_%\&\*\$\+\=]
 
 unit
   = $(english_unit !letter)
